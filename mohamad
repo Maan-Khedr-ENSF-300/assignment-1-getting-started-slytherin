@@ -10,7 +10,9 @@ def my_sub( user_1,user_2):
 
 def my_div( user_1,user_2):
     user_3 = user_1 / user_2
+    # check
     return (user_3)
+
 def my_add( user_1,user_2):
     user_3=user_1+user_2
     return(user_2)
