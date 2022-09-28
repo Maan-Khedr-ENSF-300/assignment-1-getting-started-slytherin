@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 import string
 user_input1 = int(input("enter your first value"))
 user_input2 = (input("enter your first operator"))
@@ -20,3 +22,7 @@ def my_add( user_1,user_2):
 def my_mul( user_1,user_2):
     user_3 = user_1 * user_2
     return (user_3)
+<<<<<<< HEAD
+=======
+>>>>>>> 54f6cdda502863c39d655503b780f9b26a410396
+>>>>>>> ce0c5f53be48419b9c83877ca49abd508cc2bc38
