@@ -41,7 +41,7 @@ def main():
         listNumbers=[firstValue,secondValue,thirdValue]
         listOperators=[firstOperator,secondOperator]
         eval(listNumbers,listOperators)
-    
+    #fghjkl
 def display(list1 , list2):
     """A function that prints the expression and displays the final result.
 
@@ -68,7 +68,7 @@ def myDiv( user_1,user_2):
     parameters : two 
     returns integer value
     """
-     user_3 = user_1 / user_2
+     user_3 = user_1 // user_2
      return (user_3)
 
 def myAdd( user_1,user_2):
