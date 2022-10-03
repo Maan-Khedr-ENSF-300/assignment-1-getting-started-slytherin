@@ -8,6 +8,7 @@ def operatorCall(num1,num2,operator):
         eval=myAdd(num1,num2)
     elif(operator=='-'):
         eval=mySub(num1,num2)
+        
     return(eval)
 
 
