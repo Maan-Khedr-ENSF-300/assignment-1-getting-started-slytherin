@@ -26,3 +26,14 @@ def myMul( user_1,user_2):
     """
     user_3 = user_1 * user_2
     return (user_3)
+def valInteger (user_1):
+    if(type(user_1)== "int"):
+        return 1
+    else: 
+        return 0
+def valOperator(user_1):
+    if (user_1 == '/' or user_1 =="*" or user_1 == "+" or user_1 == "-"):
+        return 1 
+    else:
+        return 0 
+
