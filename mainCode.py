@@ -16,7 +16,7 @@ def eval(numbersList, operatorsList):
     eval1=0
     finalSol=0
     if((operatorsList[0]=='/' and numbersList[1]==0)or (operatorsList[1]=='/' and numbersList[2]==0)):
-        print("Cant divide by 0 :(")
+        print("Cant divide by 0 pls enter a valid input")
         return 0
     elif((operatorsList[1] == '/'or operatorsList[1] =='*') and (operatorsList[0]=="+" or operatorsList[0]=='-')):
         eval1 = operatorCall(numbersList[1],numbersList[2],operatorsList[1])
