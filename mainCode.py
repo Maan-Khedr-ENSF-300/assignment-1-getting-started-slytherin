@@ -1,5 +1,11 @@
 
 def operatorCall(num1,num2,operator):
+    """user defined function that evaluates the expression
+    parameters : num1: An integer number
+                 num2: An integer number
+                 operator: Input value
+    returns: eval
+    """
     if(operator=='/'):
         eval=myDiv(num1,num2)
     elif(operator=='*'):
@@ -13,6 +19,12 @@ def operatorCall(num1,num2,operator):
 
 
 def eval(numbersList, operatorsList):
+    """user defined function that evaluates the expression
+    parameters : numbersList: List of numbers
+                 operatorsList: List of operators
+                 
+    returns: none
+    """
     eval1=0
     finalSol=0
     if((operatorsList[0]=='/' and numbersList[1]==0)or (operatorsList[1]=='/' and numbersList[2]==0)):
@@ -30,19 +42,21 @@ def eval(numbersList, operatorsList):
 
 def main():
     i=0
+    ## Looping while all the inputs are correct
     while(i==0):
-        firstValue = (input("Enter your first value: "))  
-        firstOperator = input("Enter your first operator: ")
-        secondValue = (input("Enter your second value: "))
-        secondOperator = input("Enter your second operator: ")
-        thirdValue = (input("Enter your third value: "))
+        firstValue = (input("Enter your first value: "))  #input first number
+        firstOperator = input("Enter your first operator: ")  #input first operator
+        secondValue = (input("Enter your second value: "))  #input second number
+        secondOperator = input("Enter your second operator: ") #input second operator
+        thirdValue = (input("Enter your third value: ")) #input third number
+        ## if any of the validating functions return 0 then start the loop again
         if( valOperator((firstOperator))==0 or valOperator(secondOperator)==0 or valInteger(int(firstValue))==0 or valInteger(int(secondValue))==0 or valInteger(int(thirdValue))==0 ):
             i=0
             print("One of the values were entered incorrectly")
         else:
             i=1
-        listNumbers=[int(firstValue),int(secondValue),int(thirdValue)]
-        listOperators=[firstOperator,secondOperator]
+        listNumbers=[int(firstValue),int(secondValue),int(thirdValue)] # list of input numbers
+        listOperators=[firstOperator,secondOperator]  # list of input operators
         eval(listNumbers,listOperators)
    
 def display(list1 , list2):
@@ -81,6 +95,7 @@ def myAdd( user_1,user_2):
     """
     user_3 = user_1 + user_2
     return (user_3)
+
 def myMul( user_1,user_2):
      """user defined function return the result of multiplication of two integers
     parameters : two 
@@ -90,12 +105,20 @@ def myMul( user_1,user_2):
      return (user_3)
 
 def valInteger (user_1):
-    if(type(user_1)== int):
+     """user defined function returns 1 if the input value is an integer
+    parameters : user_1: Input value 
+    returns 1 if user_1 is int or else returns 0
+    """
+     if(type(user_1)== int):
         return 1
-    else: 
+     else: 
         return 0
 
 def valOperator(user_1):
+    """user defined function returns 1 if the input value is an operator
+    parameters : user_1: Input value 
+    returns 1 if user_1 is an operator or else returns 0
+    """
     if (user_1 == '/' or user_1 =="*" or user_1 == "+" or user_1 == "-"):
         return 1 
     else:
