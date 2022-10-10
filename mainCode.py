@@ -16,7 +16,9 @@ def eval(numbersList, operatorsList):
     eval1=0
     finalSol=0
     if((operatorsList[0]=='/' and numbersList[1]==0)or (operatorsList[1]=='/' and numbersList[2]==0)):
-        print("Cant divide by 0 pls enter a valid input")
+
+        print("Cant divide by 0 :(")
+
         return 0
     elif((operatorsList[1] == '/'or operatorsList[1] =='*') and (operatorsList[0]=="+" or operatorsList[0]=='-')):
         eval1 = operatorCall(numbersList[1],numbersList[2],operatorsList[1])
@@ -27,6 +29,7 @@ def eval(numbersList, operatorsList):
     numbersList.append(finalSol)
     operatorsList.append("=")
     display(numbersList,operatorsList)
+
    
 def display(list1 , list2):
     """A function that prints the expression and displays the final result.
@@ -84,6 +87,7 @@ def valOperator(user_1):
     else:
         return 0 
 
+
 def main():
     i=0
     while(i==0):
@@ -100,6 +104,7 @@ def main():
         listNumbers=[int(firstValue),int(secondValue),int(thirdValue)]
         listOperators=[firstOperator,secondOperator]
         eval(listNumbers,listOperators)
+
 
 
 if __name__ == '__main__':
