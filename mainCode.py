@@ -23,25 +23,25 @@ def eval(numbersList, operatorsList):
         finalSol=operatorCall(eval1,numbersList[2],operatorsList[1])
     numbersList.append(finalSol)
     operatorsList.append("=")
-    display(numbersList,operatorsList)
+    return(numbersList,operatorsList)
 
 def main():
     i=0
     while(i==0):
-        firstValue = int(input("Enter your first value: "))  
+        firstValue = (input("Enter your first value: "))  
         firstOperator = input("Enter your first operator: ")
-        secondValue = int(input("Enter your second value: "))
+        secondValue = (input("Enter your second value: "))
         secondOperator = input("Enter your second operator: ")
-        thirdValue = int(input("Enter your third value: "))
-        if( valOperator(firstOperator)==0 or valOperator(secondOperator)==0 or valInteger(firstValue)==0 or valInteger(secondValue)==0 or valInteger(thirdValue)==0 ):
+        thirdValue = (input("Enter your third value: "))
+        if( valOperator((firstOperator))==0 or valOperator(secondOperator)==0 or valInteger(int(firstValue))==0 or valInteger(int(secondValue))==0 or valInteger(int(thirdValue))==0 ):
             i=0
             print("One of the values were entered incorrectly")
         else:
             i=1
-        listNumbers=[firstValue,secondValue,thirdValue]
+        listNumbers=[int(firstValue),int(secondValue),int(thirdValue)]
         listOperators=[firstOperator,secondOperator]
         eval(listNumbers,listOperators)
-    #fghjkl
+   
 def display(list1 , list2):
     """A function that prints the expression and displays the final result.
 
