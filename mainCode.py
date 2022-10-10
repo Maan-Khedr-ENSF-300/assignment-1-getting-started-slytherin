@@ -23,7 +23,7 @@ def eval(numbersList, operatorsList):
         finalSol=operatorCall(eval1,numbersList[2],operatorsList[1])
     numbersList.append(finalSol)
     operatorsList.append("=")
-    return(numbersList,operatorsList)
+    display(numbersList,operatorsList)
 
 def main():
     i=0
