@@ -3,8 +3,8 @@ def operatorCall(num1,num2,operator):
     """user defined function that evaluates the expression
     parameters : num1: An integer number
                  num2: An integer number
-                 operator: Input value
-    returns: eval
+                 operator: The mathematical operator
+    returns: eval: An integer formed by performing the mathematical operation on two parameter numbers
     """
     if(operator=='/'):
         eval=myDiv(num1,num2)
@@ -20,11 +20,12 @@ def operatorCall(num1,num2,operator):
 
 def eval(numbersList, operatorsList):
     """user defined function that evaluates the expression
-    parameters : numbersList: List of numbers
-                 operatorsList: List of operators
+    parameters : numbersList: List of numbers entered by the user
+                 operatorsList: List of operators entered by the user
                  
     returns: numbersList: The existing numbers list with an appended solution
-             OperatorsList: The existing operators list with an appended "=" sign
+             operatorsList: The existing operators list with an appended "=" sign
+             "Cant divide by 0 :(": Returns this string if the usere inputs an invalid input which translates to divde by 0
     """
     eval1=0
     finalSol=0
