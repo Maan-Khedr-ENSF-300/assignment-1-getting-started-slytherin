@@ -39,27 +39,30 @@ def eval(numbersList, operatorsList):
         finalSol=operatorCall(eval1,numbersList[2],operatorsList[1])
     numbersList.append(finalSol)
     operatorsList.append("=")
-    return(numbersList,operatorsList)
+    display(numbersList,operatorsList)
     
 
 def main():
-    i=0
-    ## Looping while all the inputs are correct
-    while(i==0):
-        firstValue = (input("Enter your first value: "))  #input first number
-        firstOperator = input("Enter your first operator: ")  #input first operator
-        secondValue = (input("Enter your second value: "))  #input second number
-        secondOperator = input("Enter your second operator: ") #input second operator
-        thirdValue = (input("Enter your third value: ")) #input third number
-        ## if any of the validating functions return 0 then start the loop again
-        if( valOperator((firstOperator))==0 or valOperator(secondOperator)==0 or valInteger(int(firstValue))==0 or valInteger(int(secondValue))==0 or valInteger(int(thirdValue))==0 ):
-            i=0
-            print("One of the values were entered incorrectly")
-        else:
-            i=1
-    listNumbers=[int(firstValue),int(secondValue),int(thirdValue)]
-    listOperators=[firstOperator,secondOperator]
-    eval(listNumbers,listOperators)
+    x='1'
+    while(x=='1'):
+        i=0
+        ## Looping while all the inputs are correct
+        while(i==0):
+            firstValue = (input("Enter your first value: "))  #input first number
+            firstOperator = input("Enter your first operator: ")  #input first operator
+            secondValue = (input("Enter your second value: "))  #input second number
+            secondOperator = input("Enter your second operator: ") #input second operator
+            thirdValue = (input("Enter your third value: ")) #input third number
+            ## if any of the validating functions return 0 then start the loop again
+            if( valOperator((firstOperator))==0 or valOperator(secondOperator)==0 or valInteger(int(firstValue))==0 or valInteger(int(secondValue))==0 or valInteger(int(thirdValue))==0 ):
+                i=0
+                print("One of the values were entered incorrectly")
+            else:
+                i=1
+        listNumbers=[int(firstValue),int(secondValue),int(thirdValue)]
+        listOperators=[firstOperator,secondOperator]
+        eval(listNumbers,listOperators)
+        x=input("Press 1 to continue using the calclator or press any other key to exit\n")
    
 def display(list1 , list2):
     """A function that prints the expression and displays the final result.
